@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Us 💗</title>
 
 <style>
+  .title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  font-style: italic;
+  color: #ff4d6d;
+  text-align: center;
+  margin-top: 20px;
+}
   .heart {
   position: fixed;
   top: -20px;
@@ -37,10 +46,13 @@
 }
 
 body {
-  min-height: 100vh;
-  overflow-x: hidden;
-  background: radial-gradient(circle at top, #ffe6f0, #fff5f8);
-  position: relative;
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  background-color: #ffc0cb;
+
+  background-image: radial-gradient(#ffb6c1 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 /* soft pattern background */
@@ -144,9 +156,13 @@ header p {
   max-width: 700px;
   margin: 40px auto;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   color: #444;
   font-size: 1.1rem;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
 }
   /* extra love section */
 .extra {
@@ -176,6 +192,7 @@ header p {
 </head>
 
 <body>
+  <h1 class="title">Happy 3 Months 💗</h1>
 
 <header>
   <h1>Happy 3 Months 💖</h1>
@@ -202,6 +219,10 @@ header p {
 <div class="message">
   I don’t need perfect moments, I just need you in every imperfect one.  
   Thank you for these 3 months of love, laughter, and peace 💗
+  </p>
+  <p class="extra">
+    Every day with you feels softer, warmer, and a little more like home.
+  </p>
 </div>
 
 <script>
