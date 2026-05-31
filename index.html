@@ -8,6 +8,24 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+  .flower-sticker {
+  animation: floatSticker 4s ease-in-out infinite;
+}
+
+@keyframes floatSticker {
+  0% { transform: translateY(-50%) rotate(0deg); }
+  50% { transform: translateY(-52%) rotate(2deg); }
+  100% { transform: translateY(-50%) rotate(0deg); }
+}
+  .flower-sticker {
+  position: fixed;
+  left: -30px;   /* pushes it slightly outside for “sticker” effect */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 120px;  /* adjust size */
+  z-index: 99999;
+  pointer-events: none; /* so it doesn’t block clicks */
+}
 
 /* 🎥 videos in a row */
 .video-row {
@@ -197,7 +215,7 @@ body::before {
 </head>
 
 <body>
-
+<img src="flower.png" class="flower-sticker" alt="flower">
 <!-- 🎵 MUSIC -->
 <audio id="bg-music" loop>
   <source src="music/song.mp3" type="audio/mp3">
