@@ -31,18 +31,40 @@ body::before {
   width: 100%;
   height: 100%;
   background-image: url("https://www.transparenttextures.com/patterns/flowers.png");
-  opacity: 0.08;
+  opacity: 0.18; /* stronger but still soft */
   z-index: -2;
+  transform: scale(1.1);
 }
 
 /* floating hearts */
-.heart {
+  .heart {
   position: absolute;
-  color: rgba(255, 105, 180, 0.25);
-  animation: floatUp 10s linear infinite;
-  font-size: 18px;
+  pointer-events: none;
   z-index: -1;
+  text-shadow: 0 0 10px rgba(255,105,180,0.3);
 }
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "❤";
+
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (Math.random() * 14 + 14) + "px";
+
+  // 💗 make them slightly more visible
+  heart.style.color = "rgba(255, 105, 180, 0.35)";
+
+  heart.style.animationDuration = (Math.random() * 4 + 5) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 9000);
+}
+
+// 💡 MORE DENSITY = no empty feeling
+setInterval(createHeart, 200);
 
 @keyframes floatUp {
   0% { transform: translateY(100vh) scale(1); opacity: 0; }
