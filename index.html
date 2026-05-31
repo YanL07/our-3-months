@@ -8,12 +8,54 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-  .photo {
+
+/* 🎥 videos in a row */
+.video-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* 🖼️ image grid (2 rows of 3) */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* video style */
+.video video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* image style */
+.photo img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* shared card style */
+.video, .photo {
+  background: white;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: 0.4s ease;
-  background: white;
+  transition: 0.3s ease;
+}
+
+.video:hover, .photo:hover {
+  transform: scale(1.03);
 }
 
 .photo:hover {
@@ -177,29 +219,27 @@ body::before {
 <!-- 🎥 VIDEO GALLERY -->
 
 
- <div class="gallery">
+<div class="gallery">
 
-  <!-- 🎥 3 VIDEOS -->
-  <div class="video">
-    <video src="video1.mp4" controls></video>
+  <!-- 🎥 VIDEOS (TOP ROW) -->
+  <div class="video-row">
+    <div class="video"><video src="video1.mp4" controls></video></div>
+    <div class="video"><video src="video2.mp4" controls></video></div>
+    <div class="video"><video src="video3.mp4" controls></video></div>
   </div>
 
-  <div class="video">
-    <video src="video2.mp4" controls></video>
-  </div>
+  <!-- 🖼️ IMAGES (BOTTOM GRID) -->
+  <div class="image-grid">
 
-  <div class="video">
-    <video src="video3.mp4" controls></video>
-  </div>
+    <div class="photo"><img src="img1.jpg"></div>
+    <div class="photo"><img src="img2.jpg"></div>
+    <div class="photo"><img src="img3.jpg"></div>
 
-  <!-- 🖼️ 7 IMAGES -->
-  <div class="photo"><img src="img1.jpg"></div>
-  <div class="photo"><img src="img2.jpg"></div>
-  <div class="photo"><img src="img3.jpg"></div>
-  <div class="photo"><img src="img4.jpg"></div>
-  <div class="photo"><img src="img5.jpg"></div>
-  <div class="photo"><img src="img6.jpg"></div>
-  <div class="photo"><img src="img7.jpg"></div>
+    <div class="photo"><img src="img4.jpg"></div>
+    <div class="photo"><img src="img5.jpg"></div>
+    <div class="photo"><img src="img6.jpg"></div>
+
+  </div>
 
 </div>
 
