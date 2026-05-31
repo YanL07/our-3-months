@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our 3 Months ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ffd6e7,#ffc0cb,#ffe4ec);
+min-height:100vh;
+overflow-x:hidden;
+color:white;
+}
+
+/* Floating Hearts */
+
+.heart{
+position:fixed;
+bottom:-50px;
+font-size:25px;
+animation:float 10s linear infinite;
+opacity:.6;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) rotate(360deg);
+opacity:0;
+}
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:5rem;
+font-family:'Great Vibes',cursive;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 10px white;
+}
+to{
+text-shadow:0 0 30px #ff4f8b;
+}
+}
+
+.hero p{
+font-size:1.2rem;
+max-width:700px;
+margin-top:20px;
+}
+
+.scroll{
+margin-top:40px;
+font-size:2rem;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+50%{
+transform:translateY(15px);
+}
+}
+
+/* Glass Card */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:50px 20px;
+}
+
+.card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+border-radius:25px;
+padding:40px;
+margin-bottom:40px;
+box-shadow:0 8px 32px rgba(0,0,0,.15);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* Letter */
+
+.letter h2{
+text-align:center;
+margin-bottom:25px;
+font-size:2rem;
+}
+
+.letter p{
+line-height:2;
+font-size:1.1rem;
+}
+
+/* Gallery */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+transition:.5s;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* Timeline */
+
+.timeline{
+text-align:center;
+}
+
+.timeline h2{
+margin-bottom:20px;
+}
+
+.days{
+font-size:3rem;
+font-weight:bold;
+}
+
+/* Footer */
+
+footer{
+text-align:center;
+padding:40px;
+font-size:1rem;
+}
+
+/* Music Button */
+
+.music-btn{
+position:fixed;
+top:20px;
+right:20px;
+background:white;
+color:#ff4f8b;
+border:none;
+padding:15px 20px;
+border-radius:50px;
+cursor:pointer;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+</style>
+</head>
+<body>
+
+<button class="music-btn">❤️ Our Love ❤️</button>
+
+<div id="hearts"></div>
+
+<section class="hero">
+<h1>Happy 3 Months My Love ❤️</h1>
+
+<p>
+Three months together and every day with you feels like a beautiful dream.
+Thank you for being my happiness, my peace and my favourite person.
+</p>
+
+<div class="scroll">⬇️</div>
+</section>
+
+<div class="container">
+
+<div class="card timeline">
+<h2>We've Been Together For</h2>
+<div class="days" id="daysCounter">90 Days ❤️</div>
+</div>
+
+<div class="card letter">
+
+<h2>💌 To My Beautiful Girl 💌</h2>
+
+<p>
+
+Replace this text with your own love letter.
+
+My love,
+
+These past three months have been some of the happiest moments of my life.
+Every laugh, every conversation and every memory we create means the world to me.
+
+You make ordinary days feel special and every moment with you becomes a memory I never want to forget.
+
+I love your smile, your voice, your kindness and everything that makes you who you are.
+
+Thank you for being my girl.
+
+I love you forever ❤️
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2 style="text-align:center;margin-bottom:25px;">
+📸 Our Memories 📸
+</h2>
+
+<div class="gallery">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+Made with ❤️ by Yan for the most beautiful girl in the world.
+</footer>
+
+<script>
+
+/* Floating Hearts */
+
+for(let i=0;i<35;i++){
+
+let heart=document.createElement('div');
+
+heart.className='heart';
+
+heart.innerHTML='❤️';
+
+heart.style.left=Math.random()*100+'vw';
+
+heart.style.animationDuration=(5+Math.random()*8)+'s';
+
+heart.style.fontSize=(15+Math.random()*25)+'px';
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
